@@ -121,7 +121,7 @@ AWS openjdk-12:
     AWS_REGION: us-east-1
   stage: deployment test
   script:
-    - mkdir -p /tmp/molecule/plugins && git clone https://github.com/dw/mitogen.git /tmp/molecule/plugins/mitogen
+    # - mkdir -p /tmp/molecule/plugins && git clone https://github.com/dw/mitogen.git /tmp/molecule/plugins/mitogen
     - molecule test -s cloud-aws-openjdk-12-of
   tags:
     - aws
