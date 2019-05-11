@@ -11,7 +11,8 @@ lint:
     config-file: .yamllint
 platforms:
   - name: test-aws-rhel8-ansible-role-openjdk-12-of
-    image: ami-098bb5d92c8886ca1
+    image: ami-9887c6e7
+    # ami-098bb5d92c8886ca1
     instance_type: m5.large
     region: us-east-1
     vpc_subnet_id: subnet-01be2149
@@ -21,7 +22,7 @@ platforms:
       - default
       - molecule
     wait_timeout: 1800
-    ssh_user: ec2-user
+    ssh_user: centos
     groups:
       - rhel_family
 
