@@ -17,7 +17,7 @@ platforms:
     region: us-east-1
     vpc_subnet_id: subnet-01be2149
     assign_public_ip: True
-    # spot_price: 0.04
+    spot_price: 0.04
     security_group_name:
       - default
       - molecule

@@ -36,7 +36,7 @@
           instance: '{{ item.name }}'
           Name: '{{ item.name }}'
           ssh_user: '{{ item.ssh_user }}'
-        # spot_price: '{{ item.spot_price | default(omit) }}'
+        spot_price: '{{ item.spot_price | default(omit) }}'
         # spot_wait_timeout: '{{ item.wait_timeout | default(600) }}'
         instance_initiated_shutdown_behavior: '{{ item.shutdown_behavior | default("terminate") }}'
         wait: True
