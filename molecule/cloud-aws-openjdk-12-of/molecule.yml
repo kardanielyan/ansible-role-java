@@ -82,7 +82,7 @@ platforms:
 
 provisioner:
   name: ansible
-  log: False
+  log: True
   config_options:
     defaults:
       strategy_plugins: /tmp/molecule/plugins/mitogen/ansible_mitogen/plugins/strategy
