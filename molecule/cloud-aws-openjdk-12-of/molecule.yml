@@ -12,7 +12,7 @@ lint:
 platforms:
   - name: test-aws-rhel8-ansible-role-openjdk-12-of
     image: ami-098bb5d92c8886ca1
-    instance_type: m4.large
+    instance_type: m5.large
     region: us-east-1
     vpc_subnet_id: subnet-05a2ef2b767afec50
     assign_public_ip: False
