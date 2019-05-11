@@ -69,6 +69,10 @@ platforms:
 provisioner:
   name: ansible
   log: False
+  config_options:
+    defaults:
+      strategy_plugins: /tmp/molecule/plugins/mitogen/ansible_mitogen/plugins/strategy
+      strategy: mitogen_linear
   playbooks:
     create: ../resources/provisioning/AWS/create.yml
     prepare: ../resources/provisioning/AWS/prepare.yml
