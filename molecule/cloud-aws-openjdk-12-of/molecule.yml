@@ -88,7 +88,8 @@ provisioner:
       strategy_plugins: /tmp/molecule/plugins/mitogen/ansible_mitogen/plugins/strategy
       # strategy: mitogen_linear
   playbooks:
-    create: ../resources/provisioning/AWS/create.yml
+    create: create.yml
+    # create: ../resources/provisioning/AWS/create.yml
     prepare: ../resources/provisioning/AWS/prepare.yml
     destroy: ../resources/provisioning/AWS/destroy.yml
   lint:
