@@ -76,5 +76,5 @@
   loop_control:
     loop_var: transport_driver
   when:
-    - java_unlimited_policy_enabled
+    - java_unlimited_policy_enabled | bool
     - java_full_version is version('8.151', '<')
