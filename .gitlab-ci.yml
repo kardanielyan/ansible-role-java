@@ -1,8 +1,9 @@
 ---
 # Run all tests
 stages:
-  - lint
-  - deployment test
+  # - lint
+  # - deployment test
+  - terraform test
 
 before_script:
   - rm -rf molecule/resources/provisioning
@@ -169,3 +170,12 @@ EPC java-8:
     - molecule test -s cloud-epc-delegated
   tags:
     - delegated
+
+AWS terraform:
+  variables:
+    AWS_REGION: us-east-1
+  stage: terraform test
+  script:
+    - molecule test -s test-pipeline
+  tags:
+    - aws
