@@ -3,7 +3,7 @@
 stages:
   # - lint
   # - deployment test
-  - terraform test
+  - terraform
 
 before_script:
   - rm -rf molecule/resources/provisioning
@@ -174,7 +174,7 @@ EPC java-8:
 AWS terraform:
   variables:
     AWS_REGION: us-east-1
-  stage: terraform test
+  stage: terraform
   script:
     - molecule test -s test-pipeline
   tags:
