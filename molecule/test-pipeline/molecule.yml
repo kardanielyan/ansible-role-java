@@ -9,34 +9,6 @@ platforms:
   - name: "Test message"
     debug:
       msg: "TEST MESSAGE"
-provisioner:
-  name: ansible
-  log: False
-  inventory:
-    group_vars:
-      tarball:
-        java_package: jdk
-        java_major_version: 6
-        java_tarball_install: True
-        transport: web
-        transport_web: "{{ lookup('env','STORAGE_AWS') }}/oracle-java/jdk-6u45-linux-x64.tar.gz"
-        java_unlimited_policy_transport: oracle-fallback
-
-      rpm:
-        java_package: jdk
-        java_major_version: 6
-        java_tarball_install: False
-        transport: web
-        transport_web: "{{ lookup('env','STORAGE_AWS') }}/oracle-java/jdk-6u45-linux-x64.rpm"
-        java_unlimited_policy_transport: oracle-fallback
-  playbooks:
-    create: ../resources/provisioning/AWS/create.yml
-    prepare: ../resources/provisioning/AWS/prepare.yml
-    destroy: ../resources/provisioning/AWS/destroy.yml
-  lint:
-    name: ansible-lint
-scenario:
-  name: test-pipeline
 verifier:
   name: testinfra
   options:
