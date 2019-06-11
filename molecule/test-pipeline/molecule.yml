@@ -5,10 +5,10 @@ dependency:
     role-file: requirements.yml
 driver:
   name: delegated
-platforms:
-  - name: "Test message"
-    debug:
-      msg: "TEST MESSAGE"
+# platforms:
+#   - name: "Test message"
+#     debug:
+#       msg: "TEST MESSAGE"
 verifier:
   name: testinfra
   options:
