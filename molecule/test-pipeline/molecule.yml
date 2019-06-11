@@ -11,6 +11,10 @@ lint:
     config-file: .yamllint
 platforms:
 
+  - name: "Test message"
+    debug:
+      msg: "TEST MESSAGE"
+
   - name: test-aws-centos6-ansible-role-java-6-rpm
     image: ami-1585c46a
     instance_type: m4.large
